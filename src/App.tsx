@@ -136,7 +136,7 @@ function App() {
 	}
 
 	const mapIsLowBattery = (batteryInfos: BatteryInfo[]) => {
-		return batteryInfos.map(info => info.battery_level !== null ? info.battery_level <= 20 : false);
+		return batteryInfos.map(info => info.battery_level !== null ? info.battery_level <= 20 && info.battery_level != 0 : false);
 	}
 
 	const handleAddDevice = async (id: string) => {
